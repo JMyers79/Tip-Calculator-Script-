@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "displayBill"></p>
+</body>
+<script>
+    var bill = prompt("What is your bill? ");
+    var bill = parseFloat(bill)
+    var taxedBill = (bill * .07) + bill;
+    var taxedBill = parseFloat(taxedBill);
+    var tip = taxedBill * .15;
+    var tip = parseFloat(tip)
+    var totalBill = taxedBill + tip;
+
+    var displayBillPara = document.querySelector('#displayBill');
+
+    displayBillPara.innerText = "Your final bill is $" + totalBill;
+
+    console.log("Bill after tax " + taxedBill)
+    console.log("Total for tip " + tip)
+
+
+</script>
+</html>
